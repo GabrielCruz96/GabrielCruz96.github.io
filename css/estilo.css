@@ -40,12 +40,11 @@ a {
     height: auto; /* Mantém a proporção da imagem */
 }
 
-#area-logo, #area-menu {
-    display: inline-block; 
-    margin-right: 15px; 
+#area-logo {
+    display: flex; 
+    justify-content: center; /* Centraliza a imagem */
+    align-items: center; /* Alinha a imagem verticalmente */
     padding: 10px;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    color: #022263;
 }
 
 #area-rodape {
@@ -60,7 +59,8 @@ a {
 
 /* Logo */
 .logo {
-    height: 40px;
+    max-width: 100%; /* Garante que a imagem não exceda 100% da largura do contêiner */
+    height: auto;    /* Mantém a proporção da imagem */
 }
 
 /* Links visitados */
