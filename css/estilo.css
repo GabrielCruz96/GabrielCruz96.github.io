@@ -1,85 +1,91 @@
-/*limpar formatações*/
-*{
-	margin: 0;
-	padding: 0;
+/* Limpar formatações */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adiciona box-sizing para melhor controle de layout */
 }
 
-body{
-	font-size: 1,5em;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	background: #ffffff;
+body {
+    font-size: 1.5em; /* Corrigido: use o ponto ao invés da vírgula */
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #ffffff;
 }
 
-/*Layout*/
-
+/* Layout */
 a {
-	text-decoration: none;
-	padding: 8px 12px;
+    text-decoration: none;
+    padding: 8px 12px;
 }
 
-#area-teste{
-	font-size: 1,5em;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	background: #ffffff;
-	display: flex;
-	justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 25vh; /* Define a altura do contêiner, ajuste conforme necessário */
-	
-
+#area-teste {
+    font-size: 1.5em;
+    background: #ffffff;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 25vh; 
 }
 
-
-
-#area-cabecalho{
-	display: flex;
-	justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-	align-items: center; /* Alinha o conteúdo verticalmente no centro, se necessário */
-	background-color:#ffffff ;
-	padding:5px;
-	text-align: left;
+#area-cabecalho {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em linhas */
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px;
 }
 
-.capa{
-	display: flex;
-	width: auto; /* Ou qualquer valor específico, como 500px */
-	height: auto; /* Mantém a proporção da imagem */
-	margin: 0; /* Remove qualquer margem ao redor da imagem */
-	border: none; /* Remove qualquer borda ao redor da imagem */
-    padding: 0; /* Remove qualquer preenchimento ao redor da imagem */
-	display: block; /* Remove o espaço em linha abaixo da imagem */
+.capa {
+    width: 100%; /* Ajusta para 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
-
-#area-logo, #area-menu{
-	display: inline-block; 
-	margin-right: 15px; /* Espaçamento entre os links */
-	padding:10px;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	color:#022263;
+#area-logo, #area-menu {
+    display: inline-block; 
+    margin-right: 15px; 
+    padding: 10px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: #022263;
 }
 
-#area-rodape{
-	display: flex;
-	padding:10px;
-	color:#ffffff;
-	background:#022263;
-	justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 5vh; /* Define a altura do contêiner, ajuste conforme necessário */
+#area-rodape {
+    display: flex;
+    padding: 10px;
+    color: #ffffff;
+    background: #022263;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
 }
 
+/* Logo */
 .logo {
-	height: 40px;
-	text-decoration:none;
-  }
+    height: 40px;
+}
 
-.rodape {
-	height: 5px;
-	text-decoration:none;
-  }
+/* Links visitados */
+a:visited {
+    color: #022263; 
+}
 
-  a:visited {
-	color: #022263; /* Define a cor dos links visitados para o mesmo valor ou o desejado */
-	/* Se você quiser que os links visitados não tenham efeito de sublinhado ou cor diferente, adicione aqui */
-  }
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2em; /* Diminui o tamanho da fonte em telas menores */
+    }
+    
+    #area-menu {
+        flex-direction: column; /* Empilha os itens do menu */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #area-rodape {
+        flex-direction: column; /* Empilha o conteúdo do rodapé */
+    }
+}
+
+@media (max-width: 480px) {
+    #area-teste {
+        font-size: 1em; /* Diminui ainda mais o tamanho da fonte em telas muito pequenas */
+    }
+}
